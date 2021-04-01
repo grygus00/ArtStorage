@@ -1,0 +1,701 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gabriela", serif;
+}
+@font-face {
+  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --main-font-color: #3aada8;
+  --main-font-dark: #4d4d4d;
+  --main-font-black: #141615;
+  --main-font-family-sup: "Lato";
+  --main-font-family-awe: "Montserrat";
+}
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 10px;
+}
+/* MAIN^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.container {
+  margin: auto auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* <!-- NAV///////////////////////////////////////////////////////// --> */
+.header {
+  width: 100vw;
+  background: #fff5ee;
+}
+/* <!-- FIRST-PAGE///////////////////////////////////////////////////////// --> */
+.header .black {
+  animation: decrease ease forwards 4s;
+  position: relative;
+  margin: auto;
+}
+@keyframes decrease {
+  0% {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  20% {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  100% {
+    height: 70%;
+    width: 70%;
+    top: 5rem;
+  }
+}
+.header .fpage {
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  margin-bottom: 12rem;
+}
+.header .fpage .sign {
+  padding: 1rem 0;
+  background: #141615;
+  margin: auto;
+  color: #fff5ee;
+  width: 100%;
+  user-select: none;
+  animation: padd ease forwards 4s;
+}
+@keyframes padd {
+  0% {
+    padding-bottom: 20rem;
+  }
+  100% {
+    padding-bottom: 0rem;
+  }
+}
+.header .fpage .sign img {
+  width: 40%;
+  animation: opac 7s ease forwards;
+}
+.header .fpage .sign .word {
+  font-size: 12vw;
+  font-family: "Playfair Display", serif;
+  margin: auto;
+  font-weight: 200;
+  letter-spacing: 10rem;
+}
+.header .fpage .sign .word #mainword {
+  width: 35vw;
+}
+.header .fpage .sign .more {
+  font-size: 4vw;
+  font-family: var(--main-font-family-sup);
+  text-transform: uppercase;
+  font-weight: 200;
+  color: var(--main-font-color);
+  letter-spacing: 0.1em;
+  animation: opac 7s ease forwards;
+  margin-bottom: 1rem;
+}
+.hour-span {
+  line-height: 1.7;
+}
+.header .fpage .sign .author {
+  font-size: 2.5vw;
+  font-family: var(--main-font-family-awe);
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  animation: opac 8s forwards;
+  margin-bottom: 1rem;
+}
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header .fpage .sign .word #mainword path:nth-child(2) {
+  stroke-dasharray: 762;
+  stroke-dashoffset: 762;
+  animation: line-anim 4s ease forwards 0.8s;
+}
+.header .fpage .sign .word #mainword path:nth-child(3) {
+  stroke-dasharray: 430;
+  stroke-dashoffset: 430;
+  animation: line-anim 4s ease forwards 0.8s;
+}
+.header .fpage .sign .word #mainword path:nth-child(4) {
+  stroke-dasharray: 745;
+  stroke-dashoffset: 745;
+  animation: line-anim 4s ease forwards 0.8s;
+}
+.header .fpage .sign .word #mainword path:nth-child(5) {
+  stroke-dasharray: 803;
+  stroke-dashoffset: 803;
+  animation: line-anim 4s ease forwards 0.8s;
+}
+.header .fpage .sign .word #mainword path:nth-child(6) {
+  stroke-dasharray: 765;
+  stroke-dashoffset: 765;
+  animation: line-anim 4s ease forwards 0.8s;
+}
+
+@keyframes line-anim {
+  0% {
+  }
+  75% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff5ee;
+  }
+}
+
+/* <!-- HHHHHHHHHHH///////////////////////////////////////////////////////// --> */
+.header .h1 {
+  height: 120%;
+}
+.header .h1 .container {
+  width: 90vw;
+  margin: auto;
+
+  padding-top: 6rem;
+}
+/* -ANIMATION--ANIMATION--ANIMATION--ANIMATION--ANIMATION--ANIMATION--ANIMATION- */
+/* show objects being animated */
+.animated {
+  visibility: visible;
+
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-duration: 1.4s;
+  -moz-animation-duration: 1.4s;
+  -ms-animation-duration: 1.4s;
+  -o-animation-duration: 1.4s;
+  animation-duration: 1.4s;
+
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+.animatable {
+  /* initially hide animatable objects */
+  visibility: hidden;
+
+  /* initially pause animatable objects their animations */
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animated.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+/* -ANIMATION--ANIMATION--ANIMATION--ANIMATION--ANIMATION--ANIMATION--ANIMATION- */
+.header .h1 .container .informations h2,
+.header .h1 .container .story h2 {
+  font-size: 4rem;
+  font-family: var(--main-font-family-sup);
+  color: var(--main-font-color);
+  font-weight: 100;
+  text-shadow: 1px 1px black;
+}
+.header .h1 .container .informations p .opened {
+  text-align: right;
+  justify-content: right;
+}
+.header .h1 .container .informations .shortcut img {
+  width: 4rem;
+  margin: 1rem;
+}
+.header .h1 .container p {
+  font-size: 2rem;
+  justify-content: center;
+}
+.header .h1 .container .story {
+  margin-bottom: 5rem;
+}
+.header .h1 .container .story p {
+  width: 73%;
+  margin: 0 auto;
+}
+.hrader .h1 .button {
+  margin: auto;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.header .h1 .button a {
+  position: relative;
+  padding: 1rem 2.5rem;
+  bottom: 2rem;
+  left: 45%;
+  background: #141615;
+  color: #fff5ee;
+  border: 2px solid #fff5ee;
+  font-family: var(--main-font-family-sup);
+  font-size: 2rem;
+  border-radius: 7px;
+}
+/* <!-- GALLERY///////////////////////////////////////////////////////// --> */
+.show {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 40vh;
+  user-select: none;
+}
+.show .photos {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: slideshow 30s linear infinite;
+  user-select: none;
+}
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -221.5%;
+  }
+}
+/* <!-- BUILDING///////////////////////////////////////////////////////// --> */
+.building {
+  width: 100vw;
+  height: 100vh;
+}
+.building .picture {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("img/budynek.jpg") center no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+  background-attachment: fixed;
+}
+.building .welcome {
+  font-size: 5rem;
+  text-align: center;
+  line-height: 1;
+  padding-top: 5em;
+  font-family: "Playfair Display", serif;
+  user-select: none;
+}
+.building .welcome h2 {
+  font-family: var(--main-font-family-sup);
+  color: var(--main-font-color);
+  font-size: 10rem;
+  text-shadow: 1px 1px black;
+}
+/* <!-- MENU///////////////////////////////////////////////////////// --> */
+.menu {
+  width: 100vw;
+}
+.menu .back-menu {
+  background: linear-gradient(rgba(0, 0, 0, 0), transparent),
+    url("img/menu2.png") center no-repeat;
+  background-size: cover;
+
+  height: 192, 5vh;
+}
+.menu .back-menu h2 {
+  text-align: center;
+  color: var(--main-font-color);
+  font-size: 7rem;
+  font-family: var(--main-font-family-sup);
+  text-shadow: 1px 1px black;
+}
+.menu .back-menu .container {
+  width: 80vw;
+  /* background-color: rgba(0, 0, 0, .22); */
+  color: #000000;
+}
+.menu .back-menu .container p {
+  font-size: 18px;
+  text-align: left;
+  /* margin-left: 5rem; */
+}
+.menu .back-menu .container p .first {
+  font-size: 32px;
+  font-family: var(--main-font-family-sup);
+  /* margin-left: -5rem; */
+}
+.menu .back-menu .container p .strong {
+  font-size: 24px;
+  color: rgba(58, 173, 168, 1);
+  display: flex;
+  line-height: 1.9;
+  /* margin-left: -5rem; */
+}
+hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* <!-- MOVIE///////////////////////////////////////////////////////// --> */
+.logo {
+  width: 100vw;
+  height: 100vh;
+}
+.logo video {
+  width: 100vw;
+  /* Could also use width: 100%; */
+  height: 100vh;
+  object-fit: cover;
+  margin-bottom: -5px;
+  /* position: fixed; */
+  /* Change position to absolute if you don't want it to take up the whole page */
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+.logo .img-back {
+  width: 0;
+  height: 0;
+}
+.logo .img-back img {
+  position: absolute;
+  width: 30vw;
+  top: 415rem;
+  left: 35vw;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.jello-horizontal:hover {
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2019-7-11 22:18:54
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 0.3;
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+    opacity: 0.7;
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+    opacity: 0.7;
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+    opacity: 0.9;
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+    opacity: 0.7;
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 0.3;
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 0.3;
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+    opacity: 0.7;
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+    opacity: 0.7;
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+    opacity: 0.9;
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+    opacity: 0.7;
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 0.3;
+  }
+}
+
+/* ////////////////////////////////////////// */
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #141615;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-font-color);
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(58, 173, 168, 0.8);
+}
+/* FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
+@media only screen and (max-width: 1366px) {
+  .show {
+    margin-bottom: -25.8rem;
+  }
+}
+/* @media screen and (max-width: 1024px) {
+    .header {
+        margin-bottom: -12.2rem;
+    }
+
+    .show .photos {
+        animation-duration: 50s;
+} */
+/* @media screen and (max-width: 768px) {
+    .header .fpage {
+        margin-bottom: -50%;
+    }
+    .container{
+        display: block;
+    }
+    .header .h1 {
+        height: 100vh;
+    }
+
+
+
+} */
+@media screen and (max-width: 416px) {
+}
+/* NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN */
+@media (max-width: 1380px) {
+  .building {
+    margin-top: 25.5rem;
+  }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1281px) {
+  //CSS
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .fpage {
+    padding-bottom: -30rem;
+  }
+  .header .h1 .container .informations h2,
+  .header .h1 .container .story h2 {
+    font-size: 3rem;
+  }
+  .header .h1 .container p {
+    font-size: 1.5rem;
+  }
+  @keyframes slideshow {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -271.5%;
+    }
+  }
+  .menu .back-menu .container {
+    margin-top: 10rem;
+    padding-bottom: 20rem;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    margin-bottom: -12.2rem;
+  }
+  .header .h1 .container .informations h2,
+  .header .h1 .container .story h2 {
+    font-size: 3rem;
+  }
+  .header .h1 .container p {
+    font-size: 1.5rem;
+  }
+  .menu .back-menu .container {
+    margin-top: 10rem;
+    padding-bottom: 20rem;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .building .picture {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+      url("img/budynek.jpg") center right no-repeat;
+    background-size: cover;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-attachment: fixed;
+  }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .header .fpage {
+    margin-bottom: 18rem;
+  }
+  .container {
+    display: block;
+  }
+  /* .building .picture {
+        background: linear-gradient( rgba(0,0,0,.5), transparent),
+                    url("img/budynek.jpg") center right no-repeat;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        margin:0 ;
+        background-attachment: fixed;
+    } */
+  .menu .back-menu .container {
+    margin-top: 20rem;
+    padding-bottom: 33rem;
+  }
+  hr {
+    display: none;
+  }
+  @keyframes slideshow {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: ;
+    }
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    display: block;
+  }
+  /* .building .picture {
+        background: linear-gradient( rgba(0,0,0,.5), transparent),
+                    url("img/budynek.jpg") center right no-repeat;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        margin:0 ;
+        background-attachment: fixed;
+    } */
+  .menu .back-menu .container {
+    margin-top: 25rem;
+    padding-bottom: 37rem;
+  }
+  hr {
+    display: none;
+  }
+}
