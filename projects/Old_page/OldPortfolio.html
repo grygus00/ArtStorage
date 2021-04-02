@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Marcin Grygo Portfolio</title>
+  <link rel="shortcut icon" href="image/smile.png" />
+  <link rel="stylesheet" href="https://use.typekit.net/jvu3msl.css" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#ffd528" />
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#ffd528" />
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffd528" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css"
+    integrity="sha256-+dIh4jG2jQTHZwW81yUo8h6tzXWcNumyNL5XPZbwp1E=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="loading"></div>
+  <div id="fullPage">
+    <section class="section header">
+      <div id="sign"></div>
+      <img id="sign2" src="image/neon2.png" alt="" />
+      <div id="neons">
+        <img class="neon" id="neon1" src="image/coding.png" alt="" />
+        <img class="neon" id="neon2" src="image/graphic.png" alt="" />
+        <img class="neon" id="neon3" src="image/animating.png" alt="" />
+      </div>
+      <div id="welcome"></div>
+    </section>
+    <section class="section s1">
+      <h2>Projects</h2>
+      <ul class="points">
+        <li>Click the button</li>
+        <li>to see projects I made</li>
+      </ul>
+      <div class="links">
+        <a href="project.html"><button class="linkButton">
+            CLICK ME
+          </button>
+        </a>
+      </div>
+      <div id="working"></div>
+    </section>
+    <section class="section s3">
+      <h2>About me</h2>
+      <ul class="points">
+        <li>Click the button</li>
+        <li>to know me better</li>
+      </ul>
+      <div class="links">
+        <a href="about.html"><button class="linkButton">
+            CLICK ME
+          </button>
+        </a>
+      </div>
+
+      <div id="reading"></div>
+
+      <div id="footer">
+        <p>Page created by Marcin Grygo</p>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"
+    integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk=" crossorigin="anonymous"></script>
+</body>
+<script>
+  setTimeout(function () {
+    $('#loading').fadeToggle();
+  }, 2000);
+
+
+</script>
+<script src="anime/lottie_welcome.js"></script>
+<script src="anime/lottie_Neon_sign.js"></script>
+<script src="anime/lottie_work.js"></script>
+<script src="anime/lottie_reading.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- <script src="WebAnim/SmileWebby.js"></script> -->
+<script src="script.js"></script>
+
+</html>
